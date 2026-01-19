@@ -1,0 +1,38 @@
+{
+  "variantName": "cards-actions",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-01-19T17:36:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://skrz.abbvie-sandbox-309.workers.dev/pasi-90-100/#/",
+    "originPage": "SKYRIZI PASI 90/100 Clinical Data",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "action-buttons",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "text-only action items",
+    "buttonCount": 6,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "action button grids",
+      "navigation card layouts",
+      "feature link collections"
+    ],
+    "notSuitableFor": [
+      "product cards with images",
+      "article preview cards"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/pasi-90-100/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-01-19T17:36:00.000Z"
+  }
+}

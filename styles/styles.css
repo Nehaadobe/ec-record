@@ -19,6 +19,12 @@
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
 
+  /* SKYRIZI brand colors */
+  --brand-primary: #00b5e2;
+  --brand-dark: #0077a3;
+  --brand-accent: #00d4ff;
+  --brand-text-light: #ffffff;
+
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
   --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
@@ -254,4 +260,57 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+/* Navigation bar section - fixed at bottom */
+main .section.nav-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+}
+
+main .section.nav-bar > div {
+  max-width: none;
+  padding: 0;
+}
+
+/* Footnotes section styling */
+main .section.footnotes {
+  background-color: var(--light-color);
+  padding: 24px 0;
+  margin-bottom: 80px; /* Space for fixed bottom nav */
+}
+
+/* Dark section styling */
+main .section.dark {
+  background-color: var(--dark-color);
+  color: var(--brand-text-light);
+  padding: 40px 0;
+}
+
+main .section.dark a {
+  color: var(--brand-accent);
+}
+
+/* Body padding for fixed elements */
+body.appear {
+  padding-top: 50px; /* Space for fixed ISI header */
+  padding-bottom: 60px; /* Space for fixed bottom nav */
+}
+
+/* SKYRIZI brand button styling */
+a.button.primary,
+button.primary {
+  background: linear-gradient(to right, var(--brand-dark), var(--brand-primary));
+  border: none;
+  color: var(--brand-text-light);
+}
+
+a.button.primary:hover,
+button.primary:hover {
+  background: linear-gradient(to right, var(--brand-primary), var(--brand-accent));
 }

@@ -1,0 +1,118 @@
+.hero-clinical-container .hero-clinical-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-clinical {
+  position: relative;
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+/* Background image container */
+.hero-clinical > div:first-child {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-clinical picture {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-clinical img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Content overlay */
+.hero-clinical > div:last-child {
+  position: relative;
+  z-index: 1;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.hero-clinical h1,
+.hero-clinical h2,
+.hero-clinical h3,
+.hero-clinical h4,
+.hero-clinical h5,
+.hero-clinical h6,
+.hero-clinical p {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--brand-text-light, #ffffff);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-clinical h1 {
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.hero-clinical h2 {
+  font-size: 42px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.hero-clinical.hero-clinical-no-image * {
+  color: var(--text-color);
+  text-shadow: none;
+}
+
+/* Background container styling */
+.hero-clinical .hero-clinical-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Content rows */
+.hero-clinical .hero-clinical-content-row {
+  position: relative;
+  z-index: 1;
+}
+
+/* Styled headings */
+.hero-clinical .hero-clinical-heading {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Reference superscripts */
+.hero-clinical .hero-clinical-reference {
+  font-size: 0.6em;
+  vertical-align: super;
+}
+
+@media (width >= 900px) {
+  .hero-clinical {
+    min-height: 500px;
+  }
+
+  .hero-clinical > div:last-child {
+    padding: 60px 32px;
+  }
+
+  .hero-clinical h1 {
+    font-size: 28px;
+  }
+
+  .hero-clinical h2 {
+    font-size: 52px;
+  }
+}

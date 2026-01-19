@@ -1,0 +1,64 @@
+/* SKYRIZI Action Cards - Pill Button Style */
+.cards-actions {
+  margin: 24px 0;
+}
+
+.cards-actions > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 280px;
+}
+
+.cards-actions > ul > li {
+  border: 2px solid var(--brand-primary, #00b5e2);
+  border-radius: 25px;
+  background-color: var(--background-color, #ffffff);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cards-actions > ul > li:hover {
+  background-color: var(--brand-primary, #00b5e2);
+}
+
+.cards-actions > ul > li:hover .cards-actions-card-body {
+  color: var(--background-color, #ffffff);
+}
+
+.cards-actions .cards-actions-card-body {
+  margin: 0;
+  padding: 12px 24px;
+  text-align: center;
+  color: var(--brand-primary, #00b5e2);
+  font-weight: 600;
+  font-size: var(--body-font-size-s);
+}
+
+.cards-actions .cards-actions-card-body strong {
+  font-weight: 600;
+}
+
+.cards-actions .cards-actions-card-image {
+  display: none;
+}
+
+.cards-actions > ul > li img {
+  display: none;
+}
+
+/* Responsive grid for larger screens */
+@media (width >= 600px) {
+  .cards-actions > ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: none;
+  }
+
+  .cards-actions > ul > li {
+    flex: 0 0 auto;
+  }
+}

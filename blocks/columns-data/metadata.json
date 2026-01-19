@@ -1,0 +1,38 @@
+{
+  "variantName": "columns-data",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-01-19T17:36:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://skrz.abbvie-sandbox-309.workers.dev/pasi-90-100/#/",
+    "originPage": "SKYRIZI PASI 90/100 Clinical Data",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "data-presentation",
+    "imagePattern": "chart"
+  },
+  "contentPattern": {
+    "structure": "image column + text column",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "clinical data visualization pages",
+      "chart and statistics displays",
+      "research results presentations"
+    ],
+    "notSuitableFor": [
+      "simple text comparisons",
+      "product feature columns"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/pasi-90-100/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-01-19T17:36:00.000Z"
+  }
+}

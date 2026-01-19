@@ -1,0 +1,38 @@
+{
+  "variantName": "hero-clinical",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-01-19T17:36:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://skrz.abbvie-sandbox-309.workers.dev/pasi-90-100/#/",
+    "originPage": "SKYRIZI PASI 90/100 Clinical Data",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "gradient",
+    "density": "spacious",
+    "purpose": "clinical-hero",
+    "imagePattern": "background"
+  },
+  "contentPattern": {
+    "structure": "heading + subheading",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "pharmaceutical clinical data pages",
+      "medical presentation pages",
+      "study results pages"
+    ],
+    "notSuitableFor": [
+      "product marketing pages",
+      "consumer landing pages"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/pasi-90-100/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-01-19T17:36:00.000Z"
+  }
+}
