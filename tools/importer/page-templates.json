@@ -6,6 +6,10 @@
       "description": "SKYRIZI PASI 90/100 clinical data presentation page showing efficacy results from ULTIMMA studies",
       "blocks": [
         {
+          "name": "header-isi",
+          "instances": ["header.isi-header", "div.isi-bar", "header.isi"]
+        },
+        {
           "name": "hero-clinical",
           "instances": ["section.hero"]
         },

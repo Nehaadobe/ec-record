@@ -1,0 +1,38 @@
+{
+  "variantName": "header-isi",
+  "baseBlock": "header",
+  "version": "1.0.0",
+  "created": "2026-01-19T18:06:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://skrz.abbvie-sandbox-309.workers.dev/pasi-90-100/#/",
+    "originPage": "SKYRIZI PASI 90/100 clinical data page",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "compact",
+    "purpose": "isi-header",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "back button + ISI text + prescribing link",
+    "buttonCount": 1,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "pharmaceutical ISI requirements",
+      "safety information headers",
+      "regulatory compliance bars"
+    ],
+    "notSuitableFor": [
+      "standard page headers",
+      "navigation menus"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/pasi-90-100"],
+    "reuseCount": 1,
+    "lastUsed": "2026-01-19T18:06:00.000Z"
+  }
+}
