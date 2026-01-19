@@ -68,9 +68,35 @@
   letter-spacing: 3px;
 }
 
-.hero-clinical.no-image * {
+.hero-clinical.hero-clinical-no-image * {
   color: var(--text-color);
   text-shadow: none;
+}
+
+/* Background container styling */
+.hero-clinical .hero-clinical-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Content rows */
+.hero-clinical .hero-clinical-content-row {
+  position: relative;
+  z-index: 1;
+}
+
+/* Styled headings */
+.hero-clinical .hero-clinical-heading {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Reference superscripts */
+.hero-clinical .hero-clinical-reference {
+  font-size: 0.6em;
+  vertical-align: super;
 }
 
 @media (width >= 900px) {

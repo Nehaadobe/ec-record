@@ -277,3 +277,40 @@ main .section.nav-bar > div {
   max-width: none;
   padding: 0;
 }
+
+/* Footnotes section styling */
+main .section.footnotes {
+  background-color: var(--light-color);
+  padding: 24px 0;
+  margin-bottom: 80px; /* Space for fixed bottom nav */
+}
+
+/* Dark section styling */
+main .section.dark {
+  background-color: var(--dark-color);
+  color: var(--brand-text-light);
+  padding: 40px 0;
+}
+
+main .section.dark a {
+  color: var(--brand-accent);
+}
+
+/* Body padding for fixed elements */
+body.appear {
+  padding-top: 50px; /* Space for fixed ISI header */
+  padding-bottom: 60px; /* Space for fixed bottom nav */
+}
+
+/* SKYRIZI brand button styling */
+a.button.primary,
+button.primary {
+  background: linear-gradient(to right, var(--brand-dark), var(--brand-primary));
+  border: none;
+  color: var(--brand-text-light);
+}
+
+a.button.primary:hover,
+button.primary:hover {
+  background: linear-gradient(to right, var(--brand-primary), var(--brand-accent));
+}
