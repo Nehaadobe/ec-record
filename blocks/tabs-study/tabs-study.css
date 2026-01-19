@@ -7,7 +7,7 @@
   display: flex;
   gap: 0;
   max-width: 100%;
-  font-size: var(--body-font-size-xs);
+  font-size: 10px;
   overflow-x: auto;
   justify-content: center;
   border-bottom: 2px solid #e0e0e0;
@@ -15,13 +15,13 @@
 
 @media (width >= 600px) {
   .tabs-study .tabs-study-list {
-    font-size: var(--body-font-size-s);
+    font-size: 11px;
   }
 }
 
 @media (width >= 900px) {
   .tabs-study .tabs-study-list {
-    font-size: var(--body-font-size-m);
+    font-size: 12px;
   }
 }
 
@@ -73,5 +73,11 @@
 .tabs-study .tabs-study-panel h2,
 .tabs-study .tabs-study-panel h3 {
   color: var(--brand-primary, #00b5e2);
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.tabs-study .tabs-study-panel p {
+  font-size: 10px;
+  line-height: 1.4;
 }

@@ -31,11 +31,11 @@
 
 .cards-actions .cards-actions-card-body {
   margin: 0;
-  padding: 12px 24px;
+  padding: 10px 20px;
   text-align: center;
   color: var(--brand-primary, #00b5e2);
   font-weight: 600;
-  font-size: var(--body-font-size-s);
+  font-size: 10px;
 }
 
 .cards-actions .cards-actions-card-body strong {

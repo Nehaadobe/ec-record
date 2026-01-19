@@ -2,15 +2,15 @@
 /* global WebImporter */
 
 /**
- * Import Script for SKYRIZI PASI 90/100 Clinical Pages
+ * Import Script for SKYRIZI H2H Comparison Pages
  *
- * Template: pasi-90-100-clinical
- * Description: SKYRIZI PASI 90/100 clinical data presentation page showing efficacy results from ULTIMMA studies
+ * Template: h2h-comparison
+ * Description: SKYRIZI IMMerge head-to-head comparison study page showing PASI 90 rates vs COSENTYX
  *
  * Usage with AEM Importer:
  * 1. Open https://importer.hlx.page/
- * 2. Enter source URL (e.g., https://skrz.abbvie-sandbox-309.workers.dev/pasi-90-100/#/)
- * 3. Click "Options" and set import.js path to: tools/importer/import-pasi-90-100-clinical.js
+ * 2. Enter source URL (e.g., https://skrz.abbvie-sandbox-309.workers.dev/h2h/#/)
+ * 3. Click "Options" and set import.js path to: tools/importer/import-h2h-comparison.js
  * 4. Run import
  *
  * Generated: 2026-01-19
@@ -21,9 +21,7 @@
 // ============================================================================
 import headerIsiParser from './parsers/header-isi.js';
 import heroClinicalParser from './parsers/hero-clinical.js';
-import tabsStudyParser from './parsers/tabs-study.js';
 import columnsDataParser from './parsers/columns-data.js';
-import cardsActionsParser from './parsers/cards-actions.js';
 import accordionFootnotesParser from './parsers/accordion-footnotes.js';
 import tabsNavParser from './parsers/tabs-nav.js';
 
@@ -33,9 +31,7 @@ import tabsNavParser from './parsers/tabs-nav.js';
 const parsers = {
   'header-isi': headerIsiParser,
   'hero-clinical': heroClinicalParser,
-  'tabs-study': tabsStudyParser,
   'columns-data': columnsDataParser,
-  'cards-actions': cardsActionsParser,
   'accordion-footnotes': accordionFootnotesParser,
   'tabs-nav': tabsNavParser,
 };
@@ -44,35 +40,27 @@ const parsers = {
 // PAGE TEMPLATE CONFIGURATION - Embedded from page-templates.json
 // ============================================================================
 const PAGE_TEMPLATE = {
-  name: 'pasi-90-100-clinical',
-  description: 'SKYRIZI PASI 90/100 clinical data presentation page showing efficacy results from ULTIMMA studies',
+  name: 'h2h-comparison',
+  description: 'SKYRIZI IMMerge head-to-head comparison study page showing PASI 90 rates vs COSENTYX',
   urls: [
-    'https://skrz.abbvie-sandbox-309.workers.dev/pasi-90-100/#/'
+    'https://skrz.abbvie-sandbox-309.workers.dev/h2h/#/'
   ],
   blocks: [
     {
       name: 'header-isi',
-      instances: ['header.isi-header', 'div.isi-bar', 'header.isi', '.isi-header', '[class*="isi"]']
+      instances: ['header.isi-header', 'div.isi-bar', "[class*='isi']"]
     },
     {
       name: 'hero-clinical',
-      instances: ['section.hero', '.hero', '[class*="hero"]', 'section:first-of-type']
-    },
-    {
-      name: 'tabs-study',
-      instances: ['.nav-tabs-wrapper', '.nav-tabs', "[class*='nav-tabs']", '[data-tab-target]']
+      instances: ["[class*='hero']", 'section:first-of-type']
     },
     {
       name: 'columns-data',
-      instances: ['.stage', '.vertical-nav', "[class*='stage']", '.inner-container']
-    },
-    {
-      name: 'cards-actions',
-      instances: ['div.action-buttons', '.action-buttons', '[class*="action"]', '.cta-buttons', '.button-group']
+      instances: ['.stage', '.vertical-nav', "[class*='stage']", '.inner-container', "[class*='chart']", "[class*='efficacy']"]
     },
     {
       name: 'accordion-footnotes',
-      instances: ['section.footnotes', '.footnotes', '[class*="footnote"]', '.references', '.disclosure']
+      instances: ["[class*='footnote']", "[class*='references']"]
     },
     {
       name: 'tabs-nav',
@@ -95,13 +83,11 @@ function findBlocksOnPage(document, template) {
   const pageBlocks = [];
   const processedElements = new Set();
 
-  // Find all block instances defined in the template
   template.blocks.forEach(blockDef => {
     blockDef.instances.forEach(selector => {
       try {
         const elements = document.querySelectorAll(selector);
         elements.forEach(element => {
-          // Avoid processing the same element twice
           if (!processedElements.has(element)) {
             processedElements.add(element);
             pageBlocks.push({
@@ -128,7 +114,6 @@ function findBlocksOnPage(document, template) {
  * @param {Document} document - The DOM document
  */
 function cleanupDOM(main, document) {
-  // Remove common unwanted elements
   const selectorsToRemove = [
     'script',
     'style',
@@ -150,7 +135,6 @@ function cleanupDOM(main, document) {
     }
   });
 
-  // Remove empty elements
   main.querySelectorAll('div:empty, span:empty, p:empty').forEach(el => {
     if (!el.hasAttributes() || el.classList.length === 0) {
       el.remove();
@@ -169,7 +153,6 @@ function fixImageUrls(main, originalURL) {
   main.querySelectorAll('img').forEach(img => {
     if (img.src) {
       try {
-        // Make relative URLs absolute
         if (img.src.startsWith('/')) {
           img.src = `${baseUrl.origin}${img.src}`;
         } else if (!img.src.startsWith('http')) {
@@ -206,19 +189,14 @@ function handleBackgroundImages(main, document) {
 export default {
   /**
    * Called on page load - wait for dynamic content
-   * Use this for lazy-loaded elements or SPAs
    */
   onLoad: async ({ document, url, params }) => {
-    // Wait for any modals/overlays to appear and close them
     try {
-      // Check for safety modal specific to SKYRIZI pages
       const modal = document.querySelector('.modal, .overlay, [class*="modal"]');
       if (modal) {
         const closeBtn = modal.querySelector('button, .close, [class*="close"]');
         if (closeBtn) closeBtn.click();
       }
-
-      // Wait a moment for any dynamic content
       await new Promise(resolve => setTimeout(resolve, 2000));
     } catch (e) {
       console.warn('onLoad handler warning:', e.message);
@@ -227,7 +205,6 @@ export default {
 
   /**
    * Main transformation function using 'one input / multiple outputs' pattern
-   * See helix-importer-guidelines.md for transform() pattern
    */
   transform: ({ document, url, html, params }) => {
     const main = document.body;
@@ -265,25 +242,16 @@ export default {
     });
 
     // 6. Apply WebImporter built-in rules
-    // Create metadata block from page meta tags
     WebImporter.rules.createMetadata(main, document);
-
-    // Transform any remaining background images
     WebImporter.rules.transformBackgroundImages(main, document);
-
-    // Adjust image URLs to use proxy for downloading
     WebImporter.rules.adjustImageUrls(main, url, params.originalURL);
 
-    // 7. Generate sanitized path (full localized path without extension)
-    // Handle hash-based URLs by extracting the path before the hash
+    // 7. Generate sanitized path
     let pathname = new URL(params.originalURL).pathname;
-
-    // Remove trailing slash and .html extension
     pathname = pathname.replace(/\/$/, '').replace(/\.html$/, '');
 
-    // If pathname is empty or just '/', use a default
     if (!pathname || pathname === '/') {
-      pathname = '/pasi-90-100';
+      pathname = '/h2h';
     }
 
     const path = WebImporter.FileUtils.sanitizePath(pathname);
@@ -293,7 +261,7 @@ export default {
       element: main,
       path,
       report: {
-        title: document.title || 'SKYRIZI PASI 90/100 Clinical Data',
+        title: document.title || 'SKYRIZI IMMerge H2H Comparison',
         template: PAGE_TEMPLATE.name,
         blocksFound: pageBlocks.length,
         blocksParsed: parsedBlocks,

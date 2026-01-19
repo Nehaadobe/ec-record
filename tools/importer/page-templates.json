@@ -15,11 +15,11 @@
         },
         {
           "name": "tabs-study",
-          "instances": ["nav.study-tabs"]
+          "instances": [".nav-tabs-wrapper", ".nav-tabs", "[class*='nav-tabs']", "[data-tab-target]"]
         },
         {
           "name": "columns-data",
-          "instances": ["div.efficacy-chart"]
+          "instances": [".stage", ".vertical-nav", "[class*='stage']", ".inner-container"]
         },
         {
           "name": "cards-actions",
@@ -31,7 +31,61 @@
         },
         {
           "name": "tabs-nav",
-          "instances": ["nav.bottom-nav", "div.main-navigation"]
+          "instances": ["div.nav-outer", "div.main-nav", ".main-nav", "[class*='main-nav']"]
+        }
+      ]
+    },
+    {
+      "name": "h2h-comparison",
+      "urls": ["https://skrz.abbvie-sandbox-309.workers.dev/h2h/#/"],
+      "description": "SKYRIZI IMMerge head-to-head comparison study page showing PASI 90 rates vs COSENTYX",
+      "blocks": [
+        {
+          "name": "header-isi",
+          "instances": ["header.isi-header", "div.isi-bar", "[class*='isi']"]
+        },
+        {
+          "name": "hero-clinical",
+          "instances": ["[class*='hero']", "section:first-of-type"]
+        },
+        {
+          "name": "columns-data",
+          "instances": [".stage", ".vertical-nav", "[class*='stage']", ".inner-container", "[class*='chart']", "[class*='efficacy']"]
+        },
+        {
+          "name": "accordion-footnotes",
+          "instances": ["[class*='footnote']", "[class*='references']"]
+        },
+        {
+          "name": "tabs-nav",
+          "instances": ["div.nav-outer", "div.main-nav", ".main-nav", "[class*='main-nav']"]
+        }
+      ]
+    },
+    {
+      "name": "overview-landing",
+      "urls": ["https://skrz.abbvie-sandbox-309.workers.dev/overview/#/"],
+      "description": "SKYRIZI overview landing page with key messaging for Ps and PsA indications",
+      "blocks": [
+        {
+          "name": "header-isi",
+          "instances": ["header.isi-header", "div.isi-bar", "[class*='isi']"]
+        },
+        {
+          "name": "hero-clinical",
+          "instances": ["[class*='hero']", "section:first-of-type"]
+        },
+        {
+          "name": "columns-data",
+          "instances": [".stage", ".vertical-nav", "[class*='stage']", ".inner-container", "[class*='columns']", "[class*='indication']"]
+        },
+        {
+          "name": "cards-actions",
+          "instances": ["[class*='card']", "[class*='callout']", "[class*='feature']"]
+        },
+        {
+          "name": "tabs-nav",
+          "instances": ["div.nav-outer", "div.main-nav", ".main-nav", "[class*='main-nav']"]
         }
       ]
     }

@@ -36,6 +36,23 @@
 .columns-data h3 {
   color: var(--brand-primary, #00b5e2);
   margin-top: 0;
+  font-size: 14px;
+}
+
+.columns-data h4,
+.columns-data h5 {
+  font-size: 12px;
+  margin-top: 0;
+}
+
+.columns-data p {
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.columns-data li {
+  font-size: 10px;
+  line-height: 1.4;
 }
 
 /* Data highlight styling */
