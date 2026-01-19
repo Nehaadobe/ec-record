@@ -24,6 +24,10 @@
         {
           "name": "accordion-footnotes",
           "instances": ["section.footnotes"]
+        },
+        {
+          "name": "tabs-nav",
+          "instances": ["nav.bottom-nav", "div.main-navigation"]
         }
       ]
     }

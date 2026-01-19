@@ -261,3 +261,19 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+/* Navigation bar section - fixed at bottom */
+main .section.nav-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+}
+
+main .section.nav-bar > div {
+  max-width: none;
+  padding: 0;
+}
