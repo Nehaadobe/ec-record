@@ -19,6 +19,12 @@
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
 
+  /* SKYRIZI brand colors */
+  --brand-primary: #00b5e2;
+  --brand-dark: #0077a3;
+  --brand-accent: #00d4ff;
+  --brand-text-light: #ffffff;
+
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
   --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;

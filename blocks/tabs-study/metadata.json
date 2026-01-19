@@ -1,0 +1,38 @@
+{
+  "variantName": "tabs-study",
+  "baseBlock": "tabs",
+  "version": "1.0.0",
+  "created": "2026-01-19T17:36:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://skrz.abbvie-sandbox-309.workers.dev/pasi-90-100/#/",
+    "originPage": "SKYRIZI PASI 90/100 Clinical Data",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "study-navigation",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "tab labels + tab panels",
+    "buttonCount": 4,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "clinical study comparison pages",
+      "multi-study data presentations",
+      "pharmaceutical data pages"
+    ],
+    "notSuitableFor": [
+      "general content tabs",
+      "FAQ sections"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/pasi-90-100/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-01-19T17:36:00.000Z"
+  }
+}

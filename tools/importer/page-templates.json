@@ -1,0 +1,31 @@
+{
+  "templates": [
+    {
+      "name": "pasi-90-100-clinical",
+      "urls": ["https://skrz.abbvie-sandbox-309.workers.dev/pasi-90-100/#/"],
+      "description": "SKYRIZI PASI 90/100 clinical data presentation page showing efficacy results from ULTIMMA studies",
+      "blocks": [
+        {
+          "name": "hero-clinical",
+          "instances": ["section.hero"]
+        },
+        {
+          "name": "tabs-study",
+          "instances": ["nav.study-tabs"]
+        },
+        {
+          "name": "columns-data",
+          "instances": ["div.efficacy-chart"]
+        },
+        {
+          "name": "cards-actions",
+          "instances": ["div.action-buttons"]
+        },
+        {
+          "name": "accordion-footnotes",
+          "instances": ["section.footnotes"]
+        }
+      ]
+    }
+  ]
+}

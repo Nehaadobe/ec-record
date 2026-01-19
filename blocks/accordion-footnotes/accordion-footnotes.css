@@ -1,0 +1,86 @@
+/* SKYRIZI Footnotes Accordion */
+.accordion-footnotes {
+  border-top: 3px solid var(--brand-primary, #00b5e2);
+  margin-top: 40px;
+  padding-top: 20px;
+}
+
+.accordion-footnotes details {
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.accordion-footnotes details + details {
+  margin-top: 0;
+}
+
+.accordion-footnotes details p {
+  margin-bottom: 0.8em;
+  font-size: var(--body-font-size-s);
+  color: #666;
+}
+
+.accordion-footnotes details summary {
+  position: relative;
+  padding: 16px 46px 16px 16px;
+  cursor: pointer;
+  list-style: none;
+  overflow: auto;
+  transition: background-color 0.2s;
+  font-weight: 700;
+  color: #333;
+}
+
+.accordion-footnotes details[open] summary {
+  background-color: transparent;
+}
+
+.accordion-footnotes details summary:focus,
+.accordion-footnotes details summary:hover {
+  background-color: rgba(0, 181, 226, 0.05);
+}
+
+.accordion-footnotes details summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-footnotes details summary::before {
+  content: '▶';
+  display: inline-block;
+  margin-right: 12px;
+  font-size: 10px;
+  color: var(--brand-primary, #00b5e2);
+  transition: transform 0.2s;
+}
+
+.accordion-footnotes details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.accordion-footnotes details summary::after {
+  display: none;
+}
+
+.accordion-footnotes details .accordion-footnotes-item-body {
+  padding: 16px;
+  padding-left: 32px;
+}
+
+.accordion-footnotes details[open] .accordion-footnotes-item-body {
+  border-top: none;
+  background-color: transparent;
+}
+
+/* List styling for abbreviations */
+.accordion-footnotes ul {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+
+.accordion-footnotes li {
+  padding: 4px 0;
+  font-size: var(--body-font-size-s);
+  color: #666;
+}

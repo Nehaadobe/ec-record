@@ -1,0 +1,77 @@
+/* SKYRIZI Study Tabs - Clinical Data Navigation */
+.tabs-study {
+  margin: 20px 0;
+}
+
+.tabs-study .tabs-study-list {
+  display: flex;
+  gap: 0;
+  max-width: 100%;
+  font-size: var(--body-font-size-xs);
+  overflow-x: auto;
+  justify-content: center;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+@media (width >= 600px) {
+  .tabs-study .tabs-study-list {
+    font-size: var(--body-font-size-s);
+  }
+}
+
+@media (width >= 900px) {
+  .tabs-study .tabs-study-list {
+    font-size: var(--body-font-size-m);
+  }
+}
+
+.tabs-study .tabs-study-list button {
+  flex: 0 0 max-content;
+  margin: 0;
+  border: none;
+  border-bottom: 3px solid transparent;
+  border-radius: 0;
+  padding: 12px 24px;
+  background-color: transparent;
+  color: #666;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: -2px;
+}
+
+.tabs-study .tabs-study-list button p {
+  margin: 0;
+}
+
+.tabs-study .tabs-study-list button:hover {
+  color: var(--brand-primary, #00b5e2);
+  background-color: rgba(0, 181, 226, 0.05);
+}
+
+.tabs-study .tabs-study-list button[aria-selected='true'] {
+  border-bottom-color: var(--brand-primary, #00b5e2);
+  color: var(--brand-primary, #00b5e2);
+  background-color: transparent;
+  cursor: default;
+}
+
+.tabs-study .tabs-study-panel {
+  margin-top: 0;
+  padding: 32px 24px;
+  border: none;
+  overflow: auto;
+}
+
+.tabs-study .tabs-study-panel[aria-hidden='true'] {
+  display: none;
+}
+
+/* Panel heading styling */
+.tabs-study .tabs-study-panel h2,
+.tabs-study .tabs-study-panel h3 {
+  color: var(--brand-primary, #00b5e2);
+  margin-bottom: 16px;
+}
