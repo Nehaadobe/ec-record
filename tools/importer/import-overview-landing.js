@@ -48,23 +48,23 @@ const PAGE_TEMPLATE = {
   blocks: [
     {
       name: 'header-isi',
-      instances: ['header.isi-header', 'div.isi-bar', '[class*="isi"]']
+      instances: ['header.isi-header', 'div.isi-bar', "[class*='isi']"]
     },
     {
       name: 'hero-clinical',
-      instances: ['[class*="hero"]', 'section:first-of-type']
+      instances: ["[class*='hero']", 'section:first-of-type']
     },
     {
       name: 'columns-data',
-      instances: ['[class*="columns"]', '[class*="indication"]']
+      instances: ["[class*='columns']", "[class*='indication']"]
     },
     {
       name: 'cards-actions',
-      instances: ['[class*="card"]', '[class*="callout"]', '[class*="feature"]']
+      instances: ["[class*='card']", "[class*='callout']", "[class*='feature']"]
     },
     {
       name: 'tabs-nav',
-      instances: ['nav.bottom-nav', '[class*="navigation"]']
+      instances: ['nav.bottom-nav', "[class*='navigation']"]
     }
   ]
 };
