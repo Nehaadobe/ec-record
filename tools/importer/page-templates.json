@@ -15,11 +15,11 @@
         },
         {
           "name": "tabs-study",
-          "instances": ["nav.study-tabs"]
+          "instances": [".nav-tabs-wrapper", ".nav-tabs", "[class*='nav-tabs']", "[data-tab-target]"]
         },
         {
           "name": "columns-data",
-          "instances": ["div.efficacy-chart"]
+          "instances": [".stage", ".vertical-nav", "[class*='stage']", ".inner-container"]
         },
         {
           "name": "cards-actions",
@@ -50,7 +50,7 @@
         },
         {
           "name": "columns-data",
-          "instances": ["[class*='chart']", "[class*='efficacy']", "[class*='study-results']"]
+          "instances": [".stage", ".vertical-nav", "[class*='stage']", ".inner-container", "[class*='chart']", "[class*='efficacy']"]
         },
         {
           "name": "accordion-footnotes",
@@ -77,7 +77,7 @@
         },
         {
           "name": "columns-data",
-          "instances": ["[class*='columns']", "[class*='indication']"]
+          "instances": [".stage", ".vertical-nav", "[class*='stage']", ".inner-container", "[class*='columns']", "[class*='indication']"]
         },
         {
           "name": "cards-actions",

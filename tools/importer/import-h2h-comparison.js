@@ -56,7 +56,7 @@ const PAGE_TEMPLATE = {
     },
     {
       name: 'columns-data',
-      instances: ["[class*='chart']", "[class*='efficacy']", "[class*='study-results']"]
+      instances: ['.stage', '.vertical-nav', "[class*='stage']", '.inner-container', "[class*='chart']", "[class*='efficacy']"]
     },
     {
       name: 'accordion-footnotes',

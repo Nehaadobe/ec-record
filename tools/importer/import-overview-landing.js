@@ -56,7 +56,7 @@ const PAGE_TEMPLATE = {
     },
     {
       name: 'columns-data',
-      instances: ["[class*='columns']", "[class*='indication']"]
+      instances: ['.stage', '.vertical-nav', "[class*='stage']", '.inner-container', "[class*='columns']", "[class*='indication']"]
     },
     {
       name: 'cards-actions',

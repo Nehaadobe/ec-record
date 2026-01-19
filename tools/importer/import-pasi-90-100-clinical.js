@@ -60,11 +60,11 @@ const PAGE_TEMPLATE = {
     },
     {
       name: 'tabs-study',
-      instances: ['nav.study-tabs', '.study-tabs', '[class*="study-tab"]', '.tab-navigation']
+      instances: ['.nav-tabs-wrapper', '.nav-tabs', "[class*='nav-tabs']", '[data-tab-target]']
     },
     {
       name: 'columns-data',
-      instances: ['div.efficacy-chart', '.efficacy-chart', '[class*="efficacy"]', '.chart-container', '.data-visualization']
+      instances: ['.stage', '.vertical-nav', "[class*='stage']", '.inner-container']
     },
     {
       name: 'cards-actions',
