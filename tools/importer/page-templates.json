@@ -34,6 +34,60 @@
           "instances": ["nav.bottom-nav", "div.main-navigation"]
         }
       ]
+    },
+    {
+      "name": "h2h-comparison",
+      "urls": ["https://skrz.abbvie-sandbox-309.workers.dev/h2h/#/"],
+      "description": "SKYRIZI IMMerge head-to-head comparison study page showing PASI 90 rates vs COSENTYX",
+      "blocks": [
+        {
+          "name": "header-isi",
+          "instances": ["header.isi-header", "div.isi-bar", "[class*='isi']"]
+        },
+        {
+          "name": "hero-clinical",
+          "instances": ["[class*='hero']", "section:first-of-type"]
+        },
+        {
+          "name": "columns-data",
+          "instances": ["[class*='chart']", "[class*='efficacy']", "[class*='study-results']"]
+        },
+        {
+          "name": "accordion-footnotes",
+          "instances": ["[class*='footnote']", "[class*='references']"]
+        },
+        {
+          "name": "tabs-nav",
+          "instances": ["nav.bottom-nav", "[class*='navigation']"]
+        }
+      ]
+    },
+    {
+      "name": "overview-landing",
+      "urls": ["https://skrz.abbvie-sandbox-309.workers.dev/overview/#/"],
+      "description": "SKYRIZI overview landing page with key messaging for Ps and PsA indications",
+      "blocks": [
+        {
+          "name": "header-isi",
+          "instances": ["header.isi-header", "div.isi-bar", "[class*='isi']"]
+        },
+        {
+          "name": "hero-clinical",
+          "instances": ["[class*='hero']", "section:first-of-type"]
+        },
+        {
+          "name": "columns-data",
+          "instances": ["[class*='columns']", "[class*='indication']"]
+        },
+        {
+          "name": "cards-actions",
+          "instances": ["[class*='card']", "[class*='callout']", "[class*='feature']"]
+        },
+        {
+          "name": "tabs-nav",
+          "instances": ["nav.bottom-nav", "[class*='navigation']"]
+        }
+      ]
     }
   ]
 }
