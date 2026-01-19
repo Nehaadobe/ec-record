@@ -76,7 +76,7 @@ const PAGE_TEMPLATE = {
     },
     {
       name: 'tabs-nav',
-      instances: ['nav.bottom-nav', 'div.main-navigation', '.bottom-nav', '.main-nav', 'nav:last-of-type', '[class*="navigation"]']
+      instances: ['div.nav-outer', 'div.main-nav', '.main-nav', "[class*='main-nav']"]
     }
   ]
 };
